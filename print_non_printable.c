@@ -7,7 +7,7 @@
 */
 int print_non_printable(va_list ap, char frm)
 {
-	char *string = va_arg(ap, char *);
+	unsigned char *string = va_arg(ap, unsigned  char *);
 	int i;
 	int count;
 
@@ -18,7 +18,7 @@ int print_non_printable(va_list ap, char frm)
 		return (-2);
 	while (string[i])
 	{
-		if (string[i] < 32 || string[i] >= 127)
+		if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
 		{
 			count += _putstr("\\x");
 			_putchar("0123456789ABCDEF"[string[i] / 16]);
