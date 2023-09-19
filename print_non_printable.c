@@ -14,7 +14,9 @@ int print_non_printable(va_list ap, char frm)
 	(void)frm;
 	count = 0;
 	i = 0;
-	if (!string || !string[i])
+	if (!string)
+		return (_putstr("(NULL)"));
+	if (!string[i])
 		return (-2);
 	while (string[i])
 	{
