@@ -16,6 +16,6 @@ int print_addres(va_list ap, char frm)
 	if (!arg)
 		return (_putstr("(null)"));
 	count += _putstr("0x");
-	_convert_base((long int)arg, "0123456789ABCDEF", &count, 16);
+	_convert_base((long int)arg, "0123456789abcdef", &count, 16);
 	return (count);
 }
