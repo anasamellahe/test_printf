@@ -37,11 +37,12 @@ int _printf(const char *format, ...)
 			is_printed = get_format((char *)&format[i + 1], t_list, formats);
 			if (is_printed != -1)
 			{
-				count += is_printed;
+				if (is_printed != -2)
+					count += is_printed;
 				i++;
 			}
 		}
-		if (is_printed <=  0)
+		if (is_printed <=  0 && is_printed != -2)
 			count += _putchar(format[i]);
 		is_printed = 0;
 		i++;
