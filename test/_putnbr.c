@@ -10,7 +10,6 @@ void _putnbr(long int nbr, int *count)
 	{
 		_putchar('-');
 		nbr *= (-1);
-		*count += 1;
 	}
 	if (nbr > 9)
 	{

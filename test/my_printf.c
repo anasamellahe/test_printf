@@ -31,13 +31,12 @@ int _printf(const char *format, ...)
 		{
 			is_printed = get_format((char *)&format[i + 1], t_list, formats);
 			if (is_printed != -1)
-			{
-				count += is_printed;
-				i += 2;
-			}
+				i++;
 		}
+		if (is_printed == -1 || is_printed == 0)
+			count += _putchar(format[i]);
+		count += is_printed;
 		is_printed = 0;
-		count += _putchar(format[i]);
 		i++;
 	}
 	return (count);
