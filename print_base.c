@@ -10,7 +10,7 @@ int print_base(va_list ap, char frm)
 	int count;
 	unsigned int arg;
 
-	arg = va_arg(ap, unsigned int);
+	arg = va_arg(ap, unsigned long int);
 	count = 1;
 	switch (frm)
 	{

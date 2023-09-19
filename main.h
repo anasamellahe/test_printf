@@ -27,7 +27,7 @@ int print_char(va_list, char frm);
 int get_format(char *c, va_list ap, format_t *formats);
 int _strlen(char *s);
 int print_base(va_list ap, char frm);
-int _convert_base(long int nbr, char *base, int *count, int len);
+int _convert_base(unsigned long int nbr, char *base, int *count, int len);
 int print_percent(va_list ap, char frm);
 int print_non_printable(va_list av, char frm);
 int print_addres(va_list ap, char frm);

@@ -49,5 +49,6 @@ int _printf(const char *format, ...)
 		is_printed = 0;
 		i++;
 	}
+	va_end(t_list);
 	return (count);
 }

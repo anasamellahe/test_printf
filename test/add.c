@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <string.h>
 int main ()
 {
     /*
@@ -30,8 +30,9 @@ int main ()
     char ch = 'A';
     char *p_char_single = &ch;
     double *p_double = (double*)p_int; 
+    int a;
     
-
+    a = 10;
     len = printf("Address of x: %p\n", p_int);
     len2 = _printf("Address of x: %p\n", p_int);
     printf("Length %d\n My length %d\n", len, len2);
@@ -58,9 +59,13 @@ int main ()
     _printf("Address of single character: %p\n", (void*)p_char_single);
     printf("Address of double pointer (casted): %p\n", (void*)p_double);
     _printf("Address of double pointer (casted): %p\n", (void*)p_double);
-    /*printf("--------------\n");*/
-    len = printf("%p\n");
-    len2 =_printf("%p\n");
+    printf("--------------\n");
+    len = printf(">>%p>>%p\n");
+    len = printf(">>%p>>%p\n");
+    len2 =_printf(">>%p>>%p\n");
+    printf(">>%p\n", a);
+    _printf(">>%p\n", a);
+    printf("strlen = %d\n", strlen("%p\n"));
     printf("Length %d\n My length %d\n", len, len2);
     free(p_dynamic);
     return 0;
