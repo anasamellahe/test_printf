@@ -14,7 +14,7 @@ int print_addres(va_list ap, char frm)
 	count = 0;
 	(void)frm;
 	if (!arg)
-		return (_putstr("(null)"));
+		return (_putstr("(nil)"));
 	count += _putstr("0x");
 	_convert_base((long int)arg, "0123456789abcdef", &count, 16);
 	return (count);
