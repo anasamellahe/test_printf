@@ -33,11 +33,12 @@ int _printf(const char *format, ...)
 			if (is_printed != -1)
 			{
 				count += is_printed;
-				i += 2;
+				i++;
 			}
 		}
+		if (is_printed <=  0)
+			count += _putchar(format[i]);
 		is_printed = 0;
-		count += _putchar(format[i]);
 		i++;
 	}
 	return (count);
