@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
 		{"o", print_base},
 		{"b", print_base},
 		{"%", print_percent},
+		{"S", print_non_printable},
 		{NULL, NULL}
 	};
 
