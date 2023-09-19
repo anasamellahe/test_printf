@@ -6,16 +6,8 @@
 * @count: count
 * Return: 1
 */
-int _convert_base(long int nbr, char *base, int *count)
+void _convert_base(long int nbr, char *base, int *count, int len)
 {
-	int len;
-
-	len = _strlen(base);
-	if (nbr < 0)
-	{
-		_putchar('-');
-		nbr *= -1;
-	}
 	if (nbr >= len)
 	{
 		*count += 1;
