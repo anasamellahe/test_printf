@@ -9,11 +9,9 @@
 */
 int _convert_base(long int nbr, char *base, int *count, int len)
 {
-	if (nbr >= len)
-	{
-		*count += 1;
+	if (nbr > len)
 		_convert_base(nbr / len, base, count, len);
-	}
+	(*count)++;
 	_putchar(base[nbr % len]);
 	return (1);
 }

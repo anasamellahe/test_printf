@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"b", print_base},
 		{"%", print_percent},
 		{"S", print_non_printable},
+		{"p", print_addres},
 		{NULL, NULL}
 	};
 

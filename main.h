@@ -30,5 +30,5 @@ int print_base(va_list ap, char frm);
 int _convert_base(long int nbr, char *base, int *count, int len);
 int print_percent(va_list ap, char frm);
 int print_non_printable(va_list av, char frm);
-
+int print_addres(va_list ap, char frm);
 #endif
