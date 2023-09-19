@@ -38,6 +38,14 @@ int main()
     len1 = printf("%c\n");
      _printf("_printf len = %d len1 = %d\n", len, len1);
     printf("printf len = %d len1 = %d\n", len, len1);
+    len = _printf(NULL);
+    len1 = printf(NULL);
+     _printf("_printf len = %d len1 = %d\n", len, len1);
+    printf("printf len = %d len1 = %d\n", len, len1);
+    len = _printf("%");
+    len1 = printf("%");
+     _printf("_printf len = %d len1 = %d\n", len, len1);
+    printf("printf len = %d len1 = %d\n", len, len1);
 
 
     return 0;

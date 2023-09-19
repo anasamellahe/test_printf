@@ -26,6 +26,10 @@ int _printf(const char *format, ...)
 	count = 0;
 	is_printed = 0;
 	va_start(t_list, format);
+	if (!format)
+		return (-1);
+	if (format[0] == '%' && !format[i + 1])
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')
