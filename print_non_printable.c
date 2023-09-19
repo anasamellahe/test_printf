@@ -23,8 +23,8 @@ int print_non_printable(va_list ap, char frm)
 		if ((string[i] > 0 && string[i] < 32) || string[i] >= 127)
 		{
 			count += _putstr("\\x");
-			_putchar("0123456789ABCDEF"[string[i] / 16]);
-			_putchar("0123456789ABCDEF"[string[i] % 16]);
+			count += _putchar("0123456789ABCDEF"[string[i] / 16]);
+			count += _putchar("0123456789ABCDEF"[string[i] % 16]);
 		}
 		else
 			count += _putchar(string[i]);
