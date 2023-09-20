@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"S", print_non_printable},
 		{"p", print_addres},
 		{"r", print_rev},
+		{"R", rot13},
 		{NULL, NULL}
 	};
 

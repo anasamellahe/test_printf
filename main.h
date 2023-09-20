@@ -32,4 +32,5 @@ int print_percent(va_list ap, char frm);
 int print_non_printable(va_list av, char frm);
 int print_addres(va_list ap, char frm);
 int print_rev(va_list ap, char frm);
+int rot13(va_list ap, char frm);
 #endif
