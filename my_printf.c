@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{"S", print_non_printable},
 		{"p", print_addres},
+		{"r", print_rev},
 		{NULL, NULL}
 	};
 
